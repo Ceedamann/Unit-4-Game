@@ -3,7 +3,10 @@ var losses = 0;
 var wins = 0;
 var choice = 0;
 // creation of random guess//
-randomNumber = Math.floor(Math.random()*90)+30;
+var game = function (){
+    $(".crystals").empty();
+
+    randomNumber = Math.floor(Math.random()*90)+30;
 $(".randomSpot").html("Number to get: " + randomNumber) ;
 // for loop to create the 4 div need 
 for (var i = 0; i < 4; i++){
@@ -21,20 +24,26 @@ for (var i = 0; i < 4; i++){
     })
 $(".crystals").append(crystal);
 }
-
+}
+game();
 //on click fucntion to determin when click 
-$(".crystal").on("click", function(){
+$(document).on("click",".crystal", function(){
     var number = parseInt($(this).attr("data"));
     choice += number;
+    $(".choice").html("You Have: " + choice) ;
     if(choice > randomNumber ){
         losses--;
         $(".losses").html("Losses: " +losses);
         alert("You lose try again")
+        choice =0;
+        game();
     }
     else if (choice === randomNumber){
-        wins--;
+        wins++;
         $(".wins").html("Wins: "+wins);
-        alert("You win!!")
+        alert("You win!!");
+        choice =0;
+        game();
     }
     console.log(choice)
 })
