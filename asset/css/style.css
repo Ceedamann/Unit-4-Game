@@ -1,7 +1,16 @@
 .title  {
     text-align: center;
 }
-img{
+
+.crystals{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 24px;
+}
+.crystal{
+       height: 200px;
     width: 200px;
-    height: 200px;
+    background: url(../images/diamond.png) ;
+    background-size: 200px 200px;
 }
