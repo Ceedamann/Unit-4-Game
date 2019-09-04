@@ -1,6 +1,7 @@
 var randomNumber;
-var losses
-var win;
+var losses = 0;
+var wins = 0;
+var choice = 0;
 // creation of random guess//
 randomNumber = Math.floor(Math.random()*90)+30;
 $(".randomSpot").html("Number to get: " + randomNumber) ;
@@ -23,5 +24,17 @@ $(".crystals").append(crystal);
 
 //on click fucntion to determin when click 
 $(".crystal").on("click", function(){
-    console.log($(this).attr("data"));
+    var number = parseInt($(this).attr("data"));
+    choice += number;
+    if(choice > randomNumber ){
+        losses--;
+        $(".losses").html("Losses: " +losses);
+        alert("You lose try again")
+    }
+    else if (choice === randomNumber){
+        wins--;
+        $(".wins").html("Wins: "+wins);
+        alert("You win!!")
+    }
+    console.log(choice)
 })
