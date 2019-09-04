@@ -3,8 +3,7 @@ var losses
 var win;
 // creation of random guess//
 randomNumber = Math.floor(Math.random()*90)+30;
-console.log(randomNumber)
-
+$(".randomSpot").html("Number to get: " + randomNumber) ;
 // for loop to create the 4 div need 
 for (var i = 0; i < 4; i++){
 

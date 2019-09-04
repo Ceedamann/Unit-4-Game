@@ -14,3 +14,8 @@
     background: url(../images/diamond.png) ;
     background-size: 200px 200px;
 }
+.randomSpot{
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+}
