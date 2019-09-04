@@ -20,3 +20,8 @@ for (var i = 0; i < 4; i++){
     })
 $(".crystals").append(crystal);
 }
+
+//on click fucntion to determin when click 
+$(".crystal").on("click", function(){
+    console.log($(this).attr("data"));
+})
