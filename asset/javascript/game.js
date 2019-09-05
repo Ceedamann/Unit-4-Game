@@ -23,6 +23,7 @@ for (var i = 0; i < 4; i++){
         "data": random
     })
 $(".crystals").append(crystal);
+$(".choice").html("You Have: 0 ");
 }
 }
 game();
