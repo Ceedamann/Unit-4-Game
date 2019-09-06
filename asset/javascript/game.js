@@ -33,7 +33,7 @@ $(document).on("click",".crystal", function(){
     choice += number;
     $(".choice").html("You Have: " + choice) ;
     if(choice > randomNumber ){
-        losses--;
+        losses++;
         $(".losses").html("Losses: " +losses);
         alert("You lose try again")
         choice =0;
